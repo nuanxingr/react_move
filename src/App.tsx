@@ -12,13 +12,11 @@ function App() {
   return (
     <div className="box">
       {/* //通过primary向ui库取 */}
-      <Button type="primary" className="btn">登录</Button>
+      {/* <Button type="primary" className="btn">登录</Button> */}
       <Router>
         <Switch>
           {routes.map((route: RouteType, index: number) => {
             return <Route{...route} key={index} exact />
-
-            
           })}
           <Redirect to="/phoneLogin" />
         </Switch>
